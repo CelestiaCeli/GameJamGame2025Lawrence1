@@ -14,10 +14,10 @@ public class Remote : MonoBehaviour
 
     void Update()
     {
-        ToggleTV();
+        
     }
 
-   private void ToggleTV()
+   public void ToggleTV()
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
