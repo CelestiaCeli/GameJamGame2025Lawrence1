@@ -6,7 +6,7 @@ public class Doorfunction : MonoBehaviour
     private bool isLocked = true;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Key" && isLocked)
+        if (other.gameObject.name == "Key" && isLocked == false)
         {
             OpenDoor();
             Debug.Log("Door open");
