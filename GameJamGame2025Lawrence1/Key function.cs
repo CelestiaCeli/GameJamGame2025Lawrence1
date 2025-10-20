@@ -1,14 +1,18 @@
 using UnityEngine;
 
 public class Keyfunction : MonoBehaviour
-
 {
+    public static bool keyCollected = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // Ensure your player has the "Player" tag
+        if (other.CompareTag("Player")) 
         {
-            Destroy(gameObject); // Simulate picking up the key
+            keyCollected = true;
+            Destroy(gameObject);
+            Debug.Log("Key collected!");
         }
     }
 }
+
 
