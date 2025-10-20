@@ -11,7 +11,7 @@ public class CharacterManager : MonoBehaviour
     void Start()
     {
         
-    }
+   }
 
     // Update is called once per frame
     void LateUpdate()
