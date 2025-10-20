@@ -6,10 +6,8 @@ public class CharacterManager : MonoBehaviour
 {
     private Rigidbody2D PlayerRigidBody;
     public GameObject Perspective;
-    public const float SPEED = 20;
+    public int SPEED = 20;
     public bool IsSelected = false;
-    //0 = Child, 1 = Young Adult, 2 = Elder.
-    public int Character = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
