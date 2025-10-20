@@ -1,19 +1,20 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class CharacterManager : MonoBehaviour
 {
-    public const float SPEED = 20;
-    public Rigidbody2D PlayerRigidBody;
+    private Rigidbody2D PlayerRigidBody;
 
+    public const float SPEED = 20;
     public bool IsSelected = false;
     //0 = Child, 1 = Young Adult, 2 = Elder.
     public int Character = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-   }
+        PlayerRigidBody = GetComponent<Rigidbody2D>();
+    }
 
     // Update is called once per frame
     void LateUpdate()
@@ -25,6 +26,13 @@ public class CharacterManager : MonoBehaviour
 
 
             PlayerRigidBody.linearVelocity = new Vector2(PositionX * SPEED, PositionY * SPEED);
+
         }
+    }
+
+    public void SetInspirited(bool value)
+    {
+        IsSelected = value;
+        PlayerRigidBody.linearVelocity = new Vector2(0, 0);
     }
 }
