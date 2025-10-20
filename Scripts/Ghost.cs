@@ -54,14 +54,22 @@ public class Ghost : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Please work");
-        IsSelectable = true;
-        GameObjectSelectable = collision.gameObject;
+        if (!Inspirited)
+        {
+            print("Please work");
+            IsSelectable = true;
+            GameObjectSelectable = collision.gameObject;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        print("Please work");
-        GameObjectSelectable = null;
+        if (!Inspirited)
+        {
+            print("Please work");
+            IsSelectable = false;
+            GameObjectSelectable = null;
+
+        }
     }
 }
