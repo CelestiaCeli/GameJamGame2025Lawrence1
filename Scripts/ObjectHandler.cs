@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectHandler : MonoBehaviour
 {
-    bool IsItemPickuped = false;
+    public bool IsItemPickuped = false;
     GameObject CollidedPlayer = null;
     Timer Timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

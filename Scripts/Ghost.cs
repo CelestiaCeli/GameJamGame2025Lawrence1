@@ -8,7 +8,7 @@ public class Ghost : MonoBehaviour
     private CharacterManager GhostPlayerScript;
 
     bool IsSelectable = false;
-    bool Inspirited = false;
+    public bool Inspirited = false;
 
     GameObject GameObjectSelectable;
     CharacterManager SelectedCharacter;
