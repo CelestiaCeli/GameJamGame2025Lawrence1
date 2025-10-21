@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1020937193606250324}
+  m_Father: {fileID: 8421353274336449838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1796447405924659722
 SpriteRenderer:
@@ -122,7 +122,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1026721600266093318}
   m_Father: {fileID: 1020937193606250324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7153219887841634649
@@ -196,8 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Perspective: {fileID: 0}
+  SPEED: 20
   IsSelected: 0
-  Character: 45
 --- !u!50 &5104659557156420833
 Rigidbody2D:
   serializedVersion: 5
@@ -301,6 +302,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8421353274336449838}
-  - {fileID: 1026721600266093318}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
