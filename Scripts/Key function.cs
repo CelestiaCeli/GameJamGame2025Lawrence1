@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Keyfunction : MonoBehaviour
 {
-    public static bool keyCollected = false;
+    public bool keyCollected = false;
+    public GameObject itemToToggle;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,6 +14,14 @@ public class Keyfunction : MonoBehaviour
             Debug.Log("Key collected!");
         }
     }
+
+    private void Update()
+    {
+        if (keyCollected && Input.GetKeyDown(KeyCode.T))
+        {
+            itemToToggle.SetActive(!itemToToggle.activeSelf);
+            Debug.Log("item toggled");
+            Destroy(gameObject);
+        }
+    }
 }
-
-

@@ -26,6 +26,5 @@ public class Timer : MonoBehaviour
                 TimerFin.Invoke();
             }
         }
-
     }
 }
