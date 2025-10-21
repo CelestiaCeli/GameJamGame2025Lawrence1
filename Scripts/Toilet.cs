@@ -2,15 +2,29 @@ using UnityEngine;
 
 public class Toilet : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject VHSTape;
+    private bool isPlayerNearby = false;
+
+
+    private void Update()
     {
-        
+        if (isPlayerNearby && Input.GetKeyDown(KeyCode.R))
+        {
+            GiveItem();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNearby = true;
+            Debug.Log("Press R to flush");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GiveItem()
     {
-        
+        Debug.Log("VHSTape collected!");
     }
+
 }
