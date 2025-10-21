@@ -6,6 +6,9 @@ public class Lamp : MonoBehaviour
     private bool isOn;
     public GameObject item;
 
+    public Material LampOff;
+    public Material LampOn;
+
     void Start()
     {
         isOn = false;
@@ -21,7 +24,15 @@ public class Lamp : MonoBehaviour
     {
         isOn = !isOn;
         Debug.Log(isOn);
-        item.SetActive(isOn);
+        
+        if (isOn)
+        {
+            gameObject.GetComponent<Renderer>().material = LampOn;
+        }
+        else 
+        {
+            gameObject.GetComponent<Renderer>().material = LampOff;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

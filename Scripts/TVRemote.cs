@@ -13,7 +13,7 @@ public class TVRemote : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.F) && TVRemoteHandler.IsItemPickuped)
+        if (Input.GetKeyDown(KeyCode.T) && TVRemoteHandler.IsItemPickuped)
         {
             TVRemoteUse.Invoke();
         }
