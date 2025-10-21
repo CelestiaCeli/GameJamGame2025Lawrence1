@@ -14,14 +14,4 @@ public class Keyfunction : MonoBehaviour
             Debug.Log("Key collected!");
         }
     }
-
-    private void Update()
-    {
-        if (keyCollected && Input.GetKeyDown(KeyCode.T))
-        {
-            itemToToggle.SetActive(!itemToToggle.activeSelf);
-            Debug.Log("item toggled");
-            Destroy(gameObject);
-        }
-    }
 }

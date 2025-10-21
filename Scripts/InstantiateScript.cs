@@ -51,7 +51,7 @@ public class Instantiate : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Ghost"))
+        if(collision.CompareTag("Ghost") || collision.CompareTag("Player"))
         {
             IsInArea = false;
         }
