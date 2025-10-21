@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ObjectHandler : MonoBehaviour
 {
+
+    
     public bool IsItemPickuped = false;
     GameObject CollidedPlayer = null;
     Timer Timer;
@@ -23,14 +25,16 @@ public class ObjectHandler : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        print(collision);
         if (collision.CompareTag("Player"))
         {
             CollidedPlayer = collision.gameObject;
             if (Input.GetKeyDown(KeyCode.R) && Timer.TimerFinished)
             {
-                    IsItemPickuped = !IsItemPickuped;
-                    Timer.Activate();
+                IsItemPickuped = !IsItemPickuped;
+                Timer.Activate();
             }
         }
+
     }
 }
