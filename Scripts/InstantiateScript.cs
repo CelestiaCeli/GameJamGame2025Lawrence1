@@ -1,12 +1,17 @@
+using System.Data;
+using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
 
-    public GameObject Button;
+    public GameObject Keypad;
     bool IsInArea = false;
     Ghost GhostScript;
     public GameObject GhostObject;
+    public GameObject KeypadBarrier;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,18 +25,31 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsInArea)
         {
-            Instantiate(Button, new Vector2(0f, 0f), Quaternion.identity);
+            print("Key tapped!");
+            Instantiate(Keypad, new Vector2(0f, 0f), Quaternion.identity);
         }
     }
 
+   void KeyPadUnlock()
+    {
+        Destroy(KeypadBarrier);
+    }
+
+    //This has a small bug, fix this later
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player") && GhostScript.Inspirited == true)
+        {
+            print("You are in the area.");
+            IsInArea = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if collision.
+        if(collision.CompareTag("Ghost"))
+        {
             IsInArea = false;
+        }
     }
 }
