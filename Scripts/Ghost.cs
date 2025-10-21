@@ -4,20 +4,20 @@ using static UnityEngine.Rendering.DebugUI;
 public class Ghost : MonoBehaviour
 {
     private SpriteRenderer Graphics;
-    private Rigidbody2D GhostRigidBody;
+    //private Rigidbody2D GhostRigidBody;
     private CharacterManager GhostPlayerScript;
 
     bool IsSelectable = false;
     public bool Inspirited = false;
 
     GameObject GameObjectSelectable;
-    CharacterManager SelectedCharacter;
+    //CharacterManager SelectedCharacter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Graphics = this.GetComponent<SpriteRenderer>();
-        GhostRigidBody = this.GetComponent<Rigidbody2D>();
+        //GhostRigidBody = this.GetComponent<Rigidbody2D>();
         GhostPlayerScript = this.GetComponent<CharacterManager>();
     }
 
