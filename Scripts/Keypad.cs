@@ -20,6 +20,7 @@ public class Keypad : MonoBehaviour
         {
             Correct.Invoke();
             print("You are correct");
+            Destroy(gameObject);
         }
     }
 }

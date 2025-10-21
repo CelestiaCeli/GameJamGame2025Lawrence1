@@ -2,6 +2,7 @@ using System.Data;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class NewMonoBehaviourScript : MonoBehaviour
@@ -11,6 +12,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     bool IsInArea = false;
     Ghost GhostScript;
     public GameObject GhostObject;
+    GameObject KeypadObject;
     public GameObject KeypadBarrier;
     
 
@@ -26,12 +28,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsInArea)
         {
             print("Key tapped!");
-            Instantiate(Keypad, new Vector2(0f, 0f), Quaternion.identity);
+            KeypadObject = Instantiate(Keypad, new Vector2(0f, 0f), Quaternion.identity);
+            KeypadObject.GetComponent<Keypad>().Correct.AddListener(KeyPadUnlock);
         }
     }
 
    void KeyPadUnlock()
     {
+        print("KeypadBarrierDeleted");
         Destroy(KeypadBarrier);
     }
 
