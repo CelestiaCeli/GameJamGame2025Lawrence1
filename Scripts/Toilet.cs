@@ -6,7 +6,7 @@ public class Toilet : MonoBehaviour
     private bool isPlayerNearby = false;
 
 
-    private void LateUpdate()
+    private void Update()
     {
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.R))
         {
