@@ -20,6 +20,15 @@ public class Lamp : MonoBehaviour
     public void ToggleLamp()
     {
         isOn = !isOn;
+        Debug.Log(isOn);
         item.SetActive(isOn);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Players"))
+        {
+            ToggleLamp();
+        }
     }
 }

@@ -6,10 +6,10 @@ public class Keyfunction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Players")) 
         {
             keyCollected = true;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             Debug.Log("Key collected!");
         }
     }
