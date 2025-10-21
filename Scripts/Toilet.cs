@@ -6,7 +6,7 @@ public class Toilet : MonoBehaviour
     private bool isPlayerNearby = false;
 
 
-    private void Update()
+    private void LateUpdate()
     {
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.R))
         {
@@ -15,7 +15,7 @@ public class Toilet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Players"))
         {
             isPlayerNearby = true;
             Debug.Log("Press R to flush");
@@ -24,6 +24,7 @@ public class Toilet : MonoBehaviour
 
     private void GiveItem()
     {
+
         Debug.Log("VHSTape collected!");
     }
 

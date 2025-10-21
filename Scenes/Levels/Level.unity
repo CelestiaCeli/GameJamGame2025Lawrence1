@@ -5129,6 +5129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bathroom
       objectReference: {fileID: 0}
+    - target: {fileID: 6152490677598245747, guid: daebd770b0abbd94d8ef3195abf9ea05, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6749309029192203572, guid: daebd770b0abbd94d8ef3195abf9ea05, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
