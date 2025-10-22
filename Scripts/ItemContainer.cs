@@ -9,7 +9,10 @@ public class ItemContainer : MonoBehaviour
 
     public void ItemOutput(bool SingleUse)
     {
-        Instantiate(Item, new Vector2(DimensionX, DimensionY), Quaternion.identity);
-        ItemOut = SingleUse;
+        if (!ItemOut)
+        {
+            Instantiate(Item, new Vector2(DimensionX, DimensionY), Quaternion.identity);
+            ItemOut = SingleUse;
+        }
     }
 }

@@ -10,12 +10,14 @@ public class Ghost : MonoBehaviour
     bool IsSelectable = false;
     public bool Inspirited = false;
 
+    AudioSource PossessionSound;
     GameObject GameObjectSelectable;
     //CharacterManager SelectedCharacter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        PossessionSound = this.GetComponent<AudioSource>();
         Graphics = this.GetComponent<SpriteRenderer>();
         //GhostRigidBody = this.GetComponent<Rigidbody2D>();
         GhostPlayerScript = this.GetComponent<CharacterManager>();
@@ -43,6 +45,7 @@ public class Ghost : MonoBehaviour
                 Inspirited = true;
                 GameObjectSelectable.GetComponent<CharacterManager>().SetInspirited(true);
                 GhostPlayerScript.SetInspirited(false);
+                PossessionSound.Play();
             }
             print("Inspirit");
         }
