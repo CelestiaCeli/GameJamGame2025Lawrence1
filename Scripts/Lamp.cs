@@ -6,8 +6,8 @@ public class Lamp : MonoBehaviour
     private bool isOn;
     public GameObject item;
 
-    public Material LampOff;
-    public Material LampOn;
+    public Sprite LampOff;
+    public Sprite LampOn;
 
     void Start()
     {
@@ -27,11 +27,11 @@ public class Lamp : MonoBehaviour
         
         if (isOn)
         {
-            gameObject.GetComponent<Renderer>().material = LampOn;
+            gameObject.GetComponent<SpriteRenderer>().sprite = LampOn;
         }
         else 
         {
-            gameObject.GetComponent<Renderer>().material = LampOff;
+            gameObject.GetComponent<SpriteRenderer>().sprite = LampOff;
         }
     }
 
