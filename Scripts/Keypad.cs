@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class Keypad : MonoBehaviour
 {
     public UnityEvent Correct;
-    string Code = "5836";
+    string Code = "874";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame

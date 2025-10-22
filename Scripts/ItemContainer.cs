@@ -2,23 +2,14 @@ using UnityEngine;
 
 public class ItemContainer : MonoBehaviour
 {
-    public float X = 0f;
-    public float Y = 0f;
+    public float DimensionX = 9.4f;
+    public float DimensionY = 7.2f;
     public GameObject Item;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    bool ItemOut = false;
 
-    // Update is called once per frame
-    void Update()
+    public void ItemOutput(bool SingleUse)
     {
-        
-    }
-
-    void ItemOutput()
-    {
-        Instantiate(Item, new Vector2(X, Y), Quaternion.identity);
+        Instantiate(Item, new Vector2(DimensionX, DimensionY), Quaternion.identity);
+        ItemOut = SingleUse;
     }
 }

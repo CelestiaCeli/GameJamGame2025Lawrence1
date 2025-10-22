@@ -4,7 +4,7 @@ using UnityEngine;
 public class KeyItem1 : MonoBehaviour
 {
     private ObjectHandler Object;
-    public GoalContainer BoxContainer;
+    private GoalContainer BoxContainer;
     public string KeyItemName = "Default";
     private void Start()
     {
@@ -14,6 +14,8 @@ public class KeyItem1 : MonoBehaviour
     {
         if (collision.name == "Box" && !Object.IsItemPickuped)
         {
+            //and the function you just KNOW it's there!
+            BoxContainer = collision.gameObject.GetComponent<GoalContainer>();
             ItemRetrieved();
         }
     }

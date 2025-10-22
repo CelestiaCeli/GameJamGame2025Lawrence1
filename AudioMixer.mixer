@@ -90,7 +90,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Thunder
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 96459b96b1b19cf40ad9e31a7696782b
   m_Children: []
@@ -123,7 +123,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rain
+  m_Name: BGM
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 9a2050b835b8bbd43a63ee7d56351970
   m_Children: []

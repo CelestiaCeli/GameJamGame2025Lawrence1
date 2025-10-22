@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Lamp : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class Lamp : MonoBehaviour
     private bool isOn;
     public GameObject item;
 
+    public UnityEvent LampSwitchOn;
+    public UnityEvent LampSwitchOff;
     public Sprite LampOff;
     public Sprite LampOn;
 
@@ -28,16 +31,18 @@ public class Lamp : MonoBehaviour
         if (isOn)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = LampOn;
+            LampSwitchOn.Invoke();
         }
         else 
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = LampOff;
+            LampSwitchOff.Invoke();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Players"))
+        if (other.CompareTag("Player"))
         {
             ToggleLamp();
         }

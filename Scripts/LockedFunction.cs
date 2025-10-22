@@ -12,6 +12,7 @@ public class Doorfunction : MonoBehaviour
         if (other.gameObject.name == "Key" && isLocked == false)
         {
             DoorUnlock.Invoke();
+            Destroy(gameObject);
             Debug.Log("Door open");
         }
     }
