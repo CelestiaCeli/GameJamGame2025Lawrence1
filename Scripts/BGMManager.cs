@@ -1,12 +1,16 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ChangeSceneOnMove : MonoBehaviour
+public class BGMManager : MonoBehaviour
 {
+    Timer BGMTimeInterval;
+    AudioSource RainAmbienceAudio;
+    AudioSource ThunderAmbienceAudio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
+        
+        GetComponentsInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -14,10 +18,4 @@ public class ChangeSceneOnMove : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        SceneManager.LoadScene(3);
-    }
-
 }
